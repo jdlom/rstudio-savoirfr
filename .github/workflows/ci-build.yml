@@ -39,4 +39,4 @@ jobs:
         build-args: |
             R_VERSION=${{matrix.r_version}}
         tags: |
-          ghcr.io/jdlom/rstudio-savoirfR/rstudio:${{matrix.r_version}}
+          ghcr.io/jdlom/rstudio-savoirfr/rstudio:${{matrix.r_version}}
