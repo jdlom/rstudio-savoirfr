@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        r_version: [4.0.4]
+        r_version: [3.6.3, 4.0.4]
     steps:
     - uses: actions/checkout@v2
   
@@ -39,4 +39,4 @@ jobs:
         build-args: |
             R_VERSION=${{matrix.r_version}}
         tags: |
-          ghcr.io/jdlom/rstudio-savoirfr/rstudio:latest
+          ghcr.io/jdlom/rstudio-savoirfr/rstudio:${{matrix.r_version}} 
