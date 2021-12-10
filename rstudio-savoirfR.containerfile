@@ -4,6 +4,8 @@ FROM inseefrlab/rstudio:${R_VERSION}
 
 LABEL org.opencontainers.image.source https://github.com/jdlom/rstudio-savoirfR
 
+COPY login_extra.html /etc/rstudio/login.html
+
 RUN installGithub.r \
       MTES-MCT/savoirfR \
     && install2.r --error \
